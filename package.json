@@ -13,7 +13,8 @@
     "check:all": "yarn lint && yarn check:ts"
   },
   "dependencies": {
-    "@now/node": "^1.6.1"
+    "@now/node": "^1.6.1",
+    "puppeteer-core": "^3.0.4"
   },
   "devDependencies": {
     "@types/node": "^13.13.5",
