@@ -7,6 +7,8 @@ if (!process.env.GET_TIME_SECRET) {
 }
 
 export default (req: NowRequest, res: NowResponse) => {
+  console.log(req.query.secret, process.env.GET_TIME_SECRET);
+
   if (req.query.secret !== process.env.GET_TIME_SECRET) {
     return res.status(403).json({
       error: {
