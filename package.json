@@ -12,14 +12,20 @@
     "check:ts": "tsc --noEmit --skipLibCheck",
     "check:all": "yarn lint && yarn check:ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@now/node": "^1.6.1"
+  },
   "devDependencies": {
     "@types/node": "^13.13.5",
-    "eslint": "^7.0.0",
+    "eslint": "6.x",
     "eslint-config-lffg": "^19.0.0",
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
-    "typescript": "^3.8.3"
+    "typescript": "3.7.3"
+  },
+  "resolutions": {
+    "eslint-config-lffg/@typescript-eslint/eslint-plugin": "2.30.0",
+    "eslint-config-lffg/@typescript-eslint/parser": "2.30.0"
   },
   "husky": {
     "hooks": {
