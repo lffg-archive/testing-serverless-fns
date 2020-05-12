@@ -1,0 +1,5 @@
+{
+  "env": {
+    "GET_TIME_SECRET": "@get-time-secret"
+  }
+}
