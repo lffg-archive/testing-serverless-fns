@@ -1,0 +1,12 @@
+{
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.test.*"],
+  "compilerOptions": {
+    "noEmit": false,
+    "target": "es2015",
+    "module": "commonjs",
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "@lffg/testing-serverless-fns",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "format:raw": "prettier --write --ignore-path .gitignore",
+    "format": "yarn format:raw '**/*.{json,vue,css,scss,less,graphql,gql,md,mdx,yml,yaml}' && yarn lint:fix",
+    "lint": "yarn lint:raw .",
+    "lint:fix": "yarn lint:raw --fix .",
+    "lint:raw": "eslint --ext .js,.jsx,.ts,.tsx --max-warnings=0 --ignore-path .gitignore --ignore-pattern '!.*.*'",
+    "check:ts": "tsc --noEmit --skipLibCheck",
+    "check:all": "yarn lint && yarn check:ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "eslint": "^7.0.0",
+    "eslint-config-lffg": "^19.0.0",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,vue,css,scss,less,graphql,gql,md,mdx,yml,yaml}": [
+      "yarn format:raw"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint:raw --fix"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
